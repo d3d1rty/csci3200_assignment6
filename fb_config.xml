@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  	xsi:noNamespaceSchemaLocation="fb_config.xsd">
+  	
+        <order      output="asc" />
+        <background output="0" />
+        <location   output="1" />
+        <climate    output="1" />
+        <population output="0" />
+        
+</config>

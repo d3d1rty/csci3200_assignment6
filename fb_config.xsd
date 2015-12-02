@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<xs:schema 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	>
+	
+    <xs:element name="config">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="order" type="orderAttType" minOccurs="1" maxOccurs="1" />
+				<xs:element name="background" type="displayType" minOccurs="1" maxOccurs="1" />
+				<xs:element name="location" type="displayType" minOccurs="1" maxOccurs="1" />
+				<xs:element name="climate" type="displayType" minOccurs="1" maxOccurs="1" />
+				<xs:element name="population" type="displayType" minOccurs="1" maxOccurs="1" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:complexType name="orderAttType" >                
+        <xs:attribute name="output" use="required">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="asc" />
+                    <xs:enumeration value="dec" />
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+	</xs:complexType>
+	
+	<xs:complexType name="displayType" >                
+        <xs:attribute name="output" type="xs:boolean" use="required" />
+	</xs:complexType>
+	
+</xs:schema>
